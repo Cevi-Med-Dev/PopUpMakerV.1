@@ -144,7 +144,7 @@ const stateBasedPopUp = async () => {
   let aside = document.createElement("aside");
   aside.id = "imgContainer";
   aside.innerHTML = ` 
-        <img src="./assets/imgs/${data.region}.jpg" />
+        <img src="./imgs/${data.region}.jpg" />
         <span class="imgText">Shipping In <br> ${data.city}, ${data.region}?</span>
         <div class="infoBox">
             <span class="bigText">
