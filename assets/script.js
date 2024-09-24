@@ -25,48 +25,23 @@ var PopUpObject = {
 };
 
 var formObject = {
-  offers: {
+  "Make an Offer": {
     title: "Make your Offer & We Call You!",
-    subTitle: "",
+    buttonText: "Send",
     fields: ["make your offer", "First Name", "Email", "Phone Number"],
-    buttonTxt: "Send",
-    img: "./imgs/img.svg",
+    img: "./imgs/offer.jpg",
+    webhook: "https://hooks.airtable.com/workflows/v1/genericWebhook/appEjZzbuEeVfNfPU/wflRQ9Ppx2DctwV16/wtrbKwd6loarfR9ld",
   },
   personalized: {
     title: "Do you want personalized",
     subTitle: "Call Us At 833-238-4633",
     fields: ["First Name", "Email", "Phone Number"],
-    buttonTxt: "Send",
-    img: "./imgs/img.svg",
+    buttonText: "Send",
+    img: "./imgs/personalized.jpg",
+    webhook: "https://hooks.airtable.com/workflows/v1/genericWebhook/appEjZzbuEeVfNfPU/wflRQ9Ppx2DctwV16/wtrbKwd6loarfR9ld",
   },
 };
 
-const stateBasedPopUp = async () => {
-  let url = "https://ipinfo.io/json?token=39dd58180d085e";
-  let response = await fetch(url);
-  let data = await response.json();
-  console.log(data);
-  let aside = document.createElement("aside");
-  aside.id = "imgContainer";
-  aside.innerHTML = `
-        <img src="./assets/imgs/${data.region}.jpg" />
-        <span class="imgText">Shipping In <br> ${data.city}, ${data.region}?</span>
-        <div class="infoBox">
-            <span class="bigText">
-            ${PopUpObject["reduceShippingStates"]["bigText"][0]}
-            </span>
-            <span class="smallText">
-            ${PopUpObject["reduceShippingStates"]["smallText"][0]}
-            </span>
-            <span>
-            <button class="btn">${PopUpObject["reduceShippingStates"]["btn"][0]}</button>
-            </span>
-        </div>
-    `;
-  document.getElementById("module").append(aside);
-};
-
-// provides fields and webhook
 const formBasedPopUp = {
   "Contact Us": {
     webhook: "https://",
@@ -98,11 +73,6 @@ const formBasedPopUp = {
     ],
     textArea: ["Comments"],
     buttonText: "Submit",
-  },
-  "Make an Offer": {
-    webhook: "https://",
-    fields: ["Make your Offer", "First Name", "Email", "Phone Number"],
-    buttonText: "Send",
   },
   "Sell to Us": {
     webhook: "https://",
@@ -165,6 +135,35 @@ const formBasedPopUp = {
     buttonText: "Submit",
   },
 };
+
+const stateBasedPopUp = async () => {
+  let url = "https://ipinfo.io/json?token=39dd58180d085e";
+  let response = await fetch(url);
+  let data = await response.json();
+  console.log(data);
+  let aside = document.createElement("aside");
+  aside.id = "imgContainer";
+  aside.innerHTML = `
+        <img src="./assets/imgs/${data.region}.jpg" />
+        <span class="imgText">Shipping In <br> ${data.city}, ${data.region}?</span>
+        <div class="infoBox">
+            <span class="bigText">
+            ${PopUpObject["reduceShippingStates"]["bigText"][0]}
+            </span>
+            <span class="smallText">
+            ${PopUpObject["reduceShippingStates"]["smallText"][0]}
+            </span>
+            <span>
+            <button class="btn">${PopUpObject["reduceShippingStates"]["btn"][0]}</button>
+            </span>
+        </div>
+    `;
+  document.getElementById("module").append(aside);
+};
+
+// provides fields and webhook
+
+// instead of splitting code into different pages all pop ups will be handled on one page as a side bar that show all corresponding pop up , this should alow us to hide and show information at a clikc of a bu
 
 const promoBasedPopUp = {};
 

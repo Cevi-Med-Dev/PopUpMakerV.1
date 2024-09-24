@@ -3,14 +3,28 @@ body {
     justify-content: center;
     align-items: center;
     font-family: fantasy;
+    height: 100vh;
+    width: 100%;
+    background-image: url("./imgs/pdp-CM.jpg")
+}
+
+.moduleContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.577);
+ 
 }
 
 #module {
     height: max-content;
     border-radius: 5px;
-    border: 2px solid #c40c11;
     min-width: 220px;
-
 }
 
 #imgContainer {
@@ -50,7 +64,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10px 0;
+    padding: 4px 0 10px 0;
     border-radius: 0 0 3px 3px;
 }
 
@@ -58,10 +72,9 @@ body {
     width: 70%;
     font-size: 20px;
     color: black;
-    padding:  5px 5px 0 5px;
-    border-left: 1px solid #d9d9d9;
-    border-Top: 1px solid #d9d9d9;
-    border-right: 1px solid #d9d9d9;
+    padding: 0px 5px;
+    border-left: 1px solid rgb(155, 155, 155);
+    border-right: 1px solid rgb(155, 155, 155);
 
 }
 
@@ -71,21 +84,23 @@ body {
     font-weight: 300;
     font-size: 8px;
     color: #c40c11;
-    padding:  0px 5px 0 5px;
-    border-left: 1px solid #d9d9d9;
-    border-right: 1px solid #d9d9d9;
+    padding: 0px 5px 0 5px;
+    border-left: 1px solid rgb(155, 155, 155);
+    border-right: 1px solid rgb(155, 155, 155);
 }
+
 #imgContainer button.btn {
     font-size: 9px;
     color: white;
     background-color: #c40c11;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 3px;
     padding: 2px 5px;
     margin: 5px;
     width: max-content;
 
 }
+
 #imgContainer button.btn:hover {
     font-size: 10px;
     color: #c40c11;
@@ -93,15 +108,14 @@ body {
     border: 2px solid #c40c11;
     font-weight: 900;
     border-radius: 3px;
-    padding: 2px 5px;
-    margin: 5px;
-    width: max-content;
     cursor: pointer;
 }
-#imgContainer span:last-child {  
-    padding:  0px 5px 0 5px;  
+
+#imgContainer span:last-child {
+    padding: 0px 5px 0 5px;
     width: 70%;
-    border-left: 1px solid #d9d9d9;
-    border-right: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    border-radius: 0 0 5px 5px;
+    border-left: 1px solid rgb(155, 155, 155);
+    border-right: 1px solid rgb(155, 155, 155);
+    border-bottom: 1px solid rgb(155, 155, 155);
 }
