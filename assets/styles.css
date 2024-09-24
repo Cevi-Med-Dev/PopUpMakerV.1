@@ -23,7 +23,7 @@ body {
 
 #module {
     height: max-content;
-    border-radius: 5px;
+
     min-width: 220px;
 }
 
@@ -32,13 +32,13 @@ body {
     height: 170px;
     object-fit: cover;
     position: relative;
-    border-radius: 3px;
 }
 
 #imgContainer img {
     width: 100%;
     height: 100%;
     border-radius: 3px;
+    border-radius: 10px;
 }
 
 #imgContainer span.imgText {
@@ -65,7 +65,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 4px 0 10px 0;
-    border-radius: 0 0 3px 3px;
+    border-radius: 0 0 10px 10px;
 }
 
 #imgContainer span.bigText {
@@ -114,7 +114,7 @@ body {
 #imgContainer span:last-child {
     padding: 0px 5px 0 5px;
     width: 70%;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 10px 10px;
     border-left: 1px solid rgb(155, 155, 155);
     border-right: 1px solid rgb(155, 155, 155);
     border-bottom: 1px solid rgb(155, 155, 155);
