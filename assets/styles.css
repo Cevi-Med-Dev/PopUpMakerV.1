@@ -33,6 +33,9 @@ body {
     object-fit: cover;
     position: relative;
 }
+#exit{
+    position: absolute;
+}
 
 #imgContainer img {
     width: 100%;

@@ -1,6 +1,6 @@
 var images = {
   promos: {
-    edan: "5% off",
+    edan: "5% off","imgd/5%/jpg ",
   },
 };
 var PopUpObject = {
@@ -144,8 +144,9 @@ const stateBasedPopUp = async () => {
   let aside = document.createElement("aside");
   aside.id = "imgContainer";
 console.log("works?")
-  aside.innerHTML = ` 
-        <img src="/assets/imgs/${data.region}.jpg" />
+  aside.innerHTML = `
+  <button id="exit">X</button> 
+        <img alt="${data}" src="/assets/imgs/POP-UP-CEVI-MED-SHIPPING-STATES-${data.region.toUpperCase()}.jpg" />
         <span class="imgText">Shipping In <br> ${data.city}, ${data.region}?</span>
         <div class="infoBox">
             <span class="bigText">
@@ -162,10 +163,13 @@ console.log("works?")
   document.getElementById("module").append(aside);
 };
 
+
+cm > 
+stateBasedPopUp(),
+
 // provides fields and webhook
 
 // instead of splitting code into different pages all pop ups will be handled on one page as a side bar that show all corresponding pop up , this should alow us to hide and show information at a clikc of a bu
 
-const promoBasedPopUp = {};
 
 stateBasedPopUp();
