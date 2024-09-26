@@ -143,33 +143,30 @@ const stateBasedPopUp = async () => {
   console.log(data);
   let aside = document.createElement("aside");
   aside.id = "imgContainer";
-console.log("works?")
   aside.innerHTML = `
-  <button id="exit">X</button> 
-        <img alt="${data}" src="/assets/imgs/POP-UP-CEVI-MED-SHIPPING-STATES-${data.region.toUpperCase()}.jpg" />
-        <span class="imgText">Shipping In <br> ${data.city}, ${data.region}?</span>
-        <div class="infoBox">
-            <span class="bigText">
-            ${PopUpObject["reduceShippingStates"]["bigText"][0]}
-            </span>
-            <span class="smallText">
-            ${PopUpObject["reduceShippingStates"]["smallText"][0]}
-            </span>
-            <span>
-            <button class="btn">${PopUpObject["reduceShippingStates"]["btn"][0]}</button>
-            </span>
-        </div>
-    `;
+  <img id="" alt="${data}" src="/assets/imgs/POP-UP-CEVI-MED-SHIPPING-STATES-${data.region.toUpperCase()}.jpg" />
+             <button class="btn">${
+               PopUpObject["reduceShippingStates"]["btn"][0]
+             }</button>
+  `;
   document.getElementById("module").append(aside);
 };
 
-
-cm > 
-stateBasedPopUp(),
+stateBasedPopUp();
 
 // provides fields and webhook
 
 // instead of splitting code into different pages all pop ups will be handled on one page as a side bar that show all corresponding pop up , this should alow us to hide and show information at a clikc of a bu
 
-
-stateBasedPopUp();
+// no longer needed
+// <div class="infoBox">
+//     <span class="bigText">
+//     ${PopUpObject["reduceShippingStates"]["bigText"][0]}
+//     </span>
+//     <span class="smallText">
+//     ${PopUpObject["reduceShippingStates"]["smallText"][0]}
+//     </span>
+//     <span>
+//     <button class="btn">${PopUpObject["reduceShippingStates"]["btn"][0]}</button>
+//     </span>
+// </div>
