@@ -1,8 +1,8 @@
-var images = {
-  promos: {
-    edan: "5% off","imgd/5%/jpg ",
-  },
-};
+// var images = {
+//   promos: {
+//     edan: "5% off","imgd/5%/jpg ",
+//   },
+// };
 var PopUpObject = {
   freeShipping1: {
     smallText:
@@ -24,23 +24,23 @@ var PopUpObject = {
   },
 };
 
-var formObject = {
-  "Make an Offer": {
-    title: "Make your Offer & We Call You!",
-    buttonText: "Send",
-    fields: ["make your offer", "First Name", "Email", "Phone Number"],
-    img: "./imgs/offer.jpg",
-    webhook: "https://hooks.airtable.com/workflows/v1/genericWebhook/appEjZzbuEeVfNfPU/wflRQ9Ppx2DctwV16/wtrbKwd6loarfR9ld",
-  },
-  personalized: {
-    title: "Do you want personalized",
-    subTitle: "Call Us At 833-238-4633",
-    fields: ["First Name", "Email", "Phone Number"],
-    buttonText: "Send",
-    img: "./imgs/personalized.jpg",
-    webhook: "https://hooks.airtable.com/workflows/v1/genericWebhook/appEjZzbuEeVfNfPU/wflRQ9Ppx2DctwV16/wtrbKwd6loarfR9ld",
-  },
-};
+// var formObject = {
+//   "Make an Offer": {
+//     title: "Make your Offer & We Call You!",
+//     buttonText: "Send",
+//     fields: ["make your offer", "First Name", "Email", "Phone Number"],
+//     img: "./imgs/offer.jpg",
+//     webhook: "https://hooks.airtable.com/workflows/v1/genericWebhook/appEjZzbuEeVfNfPU/wflRQ9Ppx2DctwV16/wtrbKwd6loarfR9ld",
+//   },
+//   personalized: {
+//     title: "Do you want personalized",
+//     subTitle: "Call Us At 833-238-4633",
+//     fields: ["First Name", "Email", "Phone Number"],
+//     buttonText: "Send",
+//     img: "./imgs/personalized.jpg",
+//     webhook: "https://hooks.airtable.com/workflows/v1/genericWebhook/appEjZzbuEeVfNfPU/wflRQ9Ppx2DctwV16/wtrbKwd6loarfR9ld",
+//   },
+// };
 
 const formBasedPopUp = {
   "Contact Us": {
